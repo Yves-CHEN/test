@@ -1,4 +1,3 @@
-      
 ## Overview {: .expand}
 
 ### About
@@ -45,6 +44,11 @@ The executable file is released under the MIT license.
 
 ## Basic options
 
+###Run
+./DENTIST --bfile  test --gwas-summary ./gwas.sum.22.txt \
+	--out tmp --thread-num 6
+
+
 ### Input and output
 
 --bfile	test
@@ -55,15 +59,15 @@ Reads GWAS summary data in in GCTA-COJO format.
 >Format of the GCTA-COJO file, summary.txt,
 ```nohighlight
 SNP A1 A2 freq beta se p N
-rs131538 A G 0.05 0.007 0.02 0.7 6000
-rs140378 C G 0.05 0.007 0.02 0.7 6000
+rs131538 A G 0.05 0.007 0.02  0.72  6000
+rs140378 C G 0.05 0.005 0.016 0.754 6000
 ...  
 ```
 
 --out tmp
 Specifies the prefix of output file. In this case, it outputs "tmp.qc.DENTIST.txt" in the format of "rsID zGWAS zEst  R2  chisq  P  ifDup" as follows,
 ```nohighlight
-rs131538        0.07	-0.01	0.012	0.91	0
+rs131538        0.35	-0.01	0.432	0.51	0
 rs140378	0.3	-0.9	14.4	1.47e-04	0
 ...  
 ```
@@ -94,3 +98,4 @@ Specifies the number of threads for parallel computing, given the tools is power
 
 --num-iterations 10
 Specifies the number of iterations for LD consistency test (Method). The default value is 10. 
+
