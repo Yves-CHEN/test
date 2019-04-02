@@ -44,7 +44,7 @@ The executable file is released under the MIT license.
 
 ## Basic options
 
-###Run
+### Run
 ./DENTIST --bfile  test --gwas-summary ./gwas.sum.22.txt \
 	--out tmp --thread-num 6
 
