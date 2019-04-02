@@ -52,6 +52,7 @@ The executable file is released under the MIT license.
 ### Input and output
 
 --bfile	test
+
 Reads individual-level genotype data in PLINK bed format, e.g. test.fam, test.bim and test.bed.
 
 --gwas-summary	summary.txt
